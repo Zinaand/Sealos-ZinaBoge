@@ -40,10 +40,10 @@ export function TechSkillsShowcase({ className }: TechSkillsShowcaseProps) {
     {
       id: "microsoft",
       name: "Microsoft",
-      icon: "/placeholder.svg?height=50&width=50",
+      icon: "/icon/edge.svg",
       color: "#f25022",
-      description: "我在Microsoft工作了4年，开发了多个产品。",
-      experience: "参与了多个大型项目的开发，包括Office和Azure相关产品。",
+      description: "微软技术栈",
+      experience: "熟练掌握C#/.NET生态，具有Azure云服务开发经验，理解Office 365扩展开发模式",
       relatedSkills: ["csharp", "typescript", "react", "azure"],
     },
     {
@@ -51,7 +51,7 @@ export function TechSkillsShowcase({ className }: TechSkillsShowcaseProps) {
       name: "Chromium",
       icon: "/placeholder.svg?height=50&width=50",
       color: "#4285f4",
-      description: "我对开源和Web充满热情，喜欢在这方面工作。",
+      description: "浏览器与Web技术",
       experience: "参与了Chromium项目的开发，贡献了多个功能和修复。",
       relatedSkills: ["javascript", "cpp", "webdev"],
     },

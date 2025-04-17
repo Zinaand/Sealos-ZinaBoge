@@ -4,6 +4,7 @@ import { CardShowcase } from "@/components/sections/card-showcase"
 import { Footer } from "@/components/layout/footer"
 import { BlogProfileCard } from "@/components/blog-profile-card"
 import { Profile3DCard } from "@/components/profile-3d-card"
+import ExpandableCardDemo from "@/components/ui/expandable-card-demo-grid"
 // 导入TechSkillsShowcase组件
 import { TechSkillsShowcase } from "@/components/tech-skills-showcase"
 
@@ -13,10 +14,10 @@ export default function Home() {
 
   // 职业数组 - 每个职业都有标题和链接
   const professions = [
-    { title: "player", link: "/game" },
+    { title: "player", link: "/games" },
     { title: "Programmer", link: "/code" },
     { title: "Melophile", link: "/music" },
-    { title: "Game DeveloperGame Critic", link: "/" },
+    { title: "Game DeveloperGame Critic", link: "/games" },
   
   ]
 
@@ -24,7 +25,7 @@ export default function Home() {
     <div className="min-h-screen flex flex-col">
       <main className="flex-1">
         {/* 3D个人资料卡片 */}
-        <section className="py-16 bg-gradient-to-br from-neutral-50 to-neutral-100 dark:from-neutral-950 dark:to-neutral-900">
+        <section id="profile" className="py-16">
           <div className="container mx-auto px-4">
 
 
@@ -59,7 +60,7 @@ export default function Home() {
           </div>
         </section>
          {/* 技术栈展示 */}
-         <section className="py-16 bg-muted/10">
+         <section id="code" className="py-16 bg-muted/10">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">我的技术栈</h2>
@@ -68,6 +69,13 @@ export default function Home() {
 
             <TechSkillsShowcase />
           </div>
+        </section>
+        <section id="games" className="py-16 bg-muted/10">
+        <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4">My Game</h2>
+              
+            </div>
+        <ExpandableCardDemo />
         </section>
       
       </main>
