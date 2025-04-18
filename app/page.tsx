@@ -7,7 +7,7 @@ import { Profile3DCard } from "@/components/profile-3d-card"
 import ExpandableCardDemo from "@/components/ui/expandable-card-demo-grid"
 // 导入TechSkillsShowcase组件
 import { TechSkillsShowcase } from "@/components/tech-skills-showcase"
-
+import MarqueeDemo from "@/components/marquee-demo"
 export default function Home() {
   // 名字数组 - 可以包含中文和英文名字
   const names = ["Zina", "王世博"]
@@ -59,6 +59,12 @@ export default function Home() {
             </div>
           </div>
         </section>
+        
+        {/* 评价与反馈跑马灯 */}
+        <section id="testimonials" className="py-8">
+          <MarqueeDemo />
+        </section>
+        
          {/* 技术栈展示 */}
          <section id="code" className="py-16 bg-muted/10">
           <div className="container mx-auto px-4">
@@ -70,12 +76,15 @@ export default function Home() {
             <TechSkillsShowcase />
           </div>
         </section>
+        
+        {/* 游戏展示 */}
         <section id="games" className="py-16 bg-muted/10">
-        <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">My Game</h2>
-              
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+            
             </div>
-        <ExpandableCardDemo />
+            <ExpandableCardDemo />
+          </div>
         </section>
       
       </main>

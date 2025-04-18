@@ -19,7 +19,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="zh-CN" suppressHydrationWarning>
+      
       <body className={inter.className}>
+      <link 
+          rel="stylesheet" 
+          href="//at.alicdn.com/t/c/font_4897482_bkfak91pelq.css" 
+        />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <ParticlesBackground>
             <NavbarDemo /> {/* 使用新的导航栏 */}

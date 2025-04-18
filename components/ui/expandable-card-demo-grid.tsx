@@ -199,7 +199,7 @@ const cards = [
   {
     description: "Riot Game",
     title: "英雄联盟",
-    src: "https://www.leagueoflegends.com/static/open-graph-2e582ae9fae8b0b396ca46ff21fd47a8.jpg",
+    src: "/images/games/lol.svg",
     ctaText: "官网",
     ctaLink: "https://www.leagueoflegends.com/",
     content: () => {
@@ -284,9 +284,9 @@ const cards = [
   {
     description: "Blizzard Entertainment",
     title: "炉石传说",
-    src: "https://bnetcmsus-a.akamaihd.net/cms/blog_header/2g/2G4AKOKEAXRF1562147206908.jpg",
+    src: "/images/games/hearthstone.svg",
     ctaText: "官网",
-    ctaLink: "https://playhearthstone.com/",
+    ctaLink: "https://hs.blizzard.cn/",
     content: () => {
       return (
         <p>

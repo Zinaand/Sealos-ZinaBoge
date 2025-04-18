@@ -6,12 +6,12 @@ import { useState, useRef, useEffect, useCallback } from "react"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 import { cn } from "@/lib/utils"
-
+import { Iconfont } from '@/components/ui/Iconfont';
 // 定义技术类型
 interface Technology {
   id: string
   name: string
-  icon: string
+  iconName: string
   color: string
   description: string
   experience: string
@@ -40,8 +40,8 @@ export function TechSkillsShowcase({ className }: TechSkillsShowcaseProps) {
     {
       id: "microsoft",
       name: "Microsoft",
-      icon: "/icon/edge.svg",
-      color: "#f25022",
+      iconName: "icon-microsoft",
+      color: "#f22502",
       description: "微软技术栈",
       experience: "熟练掌握C#/.NET生态，具有Azure云服务开发经验，理解Office 365扩展开发模式",
       relatedSkills: ["csharp", "typescript", "react", "azure"],
@@ -49,16 +49,16 @@ export function TechSkillsShowcase({ className }: TechSkillsShowcaseProps) {
     {
       id: "chromium",
       name: "Chromium",
-      icon: "/placeholder.svg?height=50&width=50",
+      iconName: "icon-chrome ",
       color: "#4285f4",
       description: "浏览器与Web技术",
-      experience: "参与了Chromium项目的开发，贡献了多个功能和修复。",
+      experience: "深入Chromium架构理解，具备现代浏览器扩展开发能力",
       relatedSkills: ["javascript", "cpp", "webdev"],
     },
     {
       id: "frontend",
       name: "前端开发",
-      icon: "/placeholder.svg?height=50&width=50",
+      iconName: "icon-react",
       color: "#61dafb",
       description: "专注于创建现代化、响应式的用户界面。",
       experience: "精通React、Vue和Angular等前端框架，构建了多个大型应用。",
@@ -202,7 +202,7 @@ export function TechSkillsShowcase({ className }: TechSkillsShowcaseProps) {
                       }}
                       transition={{ duration: 0.3 }}
                     >
-                      <Image src={tech.icon || "/placeholder.svg"} alt={tech.name} width={30} height={30} />
+                      <Iconfont name={tech.iconName} className="text-2xl" />
                     </motion.div>
                     <div>
                       <motion.h3

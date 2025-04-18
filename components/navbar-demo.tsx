@@ -58,7 +58,7 @@ export function NavbarDemo() {
                 GitHub
               </NavbarButton>
             </Link>
-            <Link href="https://spachttps://space.bilibili.com/357723429?spm_id_from=333.1007.0.0e.bilibili.com/yourid" target="_blank" rel="noopener noreferrer">
+            <Link href="https://space.bilibili.com/357723429?spm_id_from=333.1007.0.0" target="_blank" rel="noopener noreferrer">
               <NavbarButton variant="primary" className="group relative overflow-hidden">
                 <span className="relative z-10 flex items-center gap-2">
                   <svg viewBox="0 0 1024 1024" width="18" height="18" fill="currentColor">
