@@ -19,7 +19,7 @@ export function NavbarDemo() {
   const navItems = [
     {
       name: "Game",
-      link: "/games",
+      link: "#games",
     },
     {
       name: "Code",

@@ -7,6 +7,7 @@ import { useEffect, useState } from "react"
 import { Skeleton } from "@/components/ui/skeleton"
 import Image from "next/image"
 import { Iconfont } from '@/components/ui/Iconfont';
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 type SocialPlatform = {
   name: string;
   username: string;
@@ -27,17 +28,17 @@ export default function MarqueeDemo() {
       const updatedPlatforms: SocialPlatform[] = [
         {
           name: "哔哩哔哩",
-          username: "游戏游牧人",
+          username: "@姿纳",
           stats: `${stats.bilibili.followers.toLocaleString()} 粉丝 · ${stats.bilibili.views.toLocaleString()} 播放 · ${stats.bilibili.videos} 视频`,
           description: "我不仅仅是玩游戏，我将游戏视为一种实验。通过游戏，我研究行为心理学、产品设计、决策制定和美学。",
-          iconName: "icon-bilibili1",
+          iconName: "icon-bilibili-fill",
           bgColor: "#FB7299",
           link: "https://space.bilibili.com/357723429",
         },
         {
           name: "抖音",
-          username: "@游戏游牧人",
-          stats: `${stats.douyin.followers.toLocaleString()}+ 粉丝 · ${stats.douyin.likes.toLocaleString()}+ 点赞`,
+          username: "@姿纳",
+          stats: `${stats.douyin.followers.toLocaleString()} 粉丝 · ${stats.douyin.likes.toLocaleString()} 点赞`,
           description: "分享游戏心得、产品分析和设计思考，探索游戏与心理学的交叉领域。",
           iconName: "icon-douyin",
           bgColor: "#000000",
@@ -45,8 +46,8 @@ export default function MarqueeDemo() {
         },
         {
           name: "小红书",
-          username: "@游戏游牧人",
-          stats: `${stats.xiaohongshu.followers.toLocaleString()}+ 粉丝 · ${stats.xiaohongshu.notes.toLocaleString()}+ 笔记`,
+          username: "@姿纳",
+          stats: `${stats.xiaohongshu.followers.toLocaleString()} 粉丝 · ${stats.xiaohongshu.notes.toLocaleString()} 笔记`,
           description: "记录游戏评测、设计分析和美学探索，分享独特视角下的游戏体验。",
           iconName: "icon-xiaohongshu",
           bgColor: "#FE2C55",
@@ -54,17 +55,17 @@ export default function MarqueeDemo() {
         },
         {
           name: "知乎",
-          username: "游戏游牧人",
-          stats: `${stats.zhihu.followers.toLocaleString()}+ 关注者 · ${stats.zhihu.answers.toLocaleString()}+ 回答`,
+          username: "@姿纳",
+          stats: `${stats.zhihu.followers.toLocaleString()} 关注者 · ${stats.zhihu.answers.toLocaleString()} 回答`,
           description: "深度解析游戏机制、产品心理学和用户体验设计，探讨游戏与现实的连接。",
-          iconName: "icon-shejiaotubiao-10",
+          iconName: "icon-zhihu",
           bgColor: "#0084FF",
           link: "https://www.zhihu.com/",
         },
         {
           name: "微博",
-          username: "@游戏游牧人",
-          stats: `${stats.weibo.followers.toLocaleString()}+ 粉丝 · ${stats.weibo.posts.toLocaleString()}+ 微博`,
+          username: "@姿纳",
+          stats: `${stats.weibo.followers.toLocaleString()} 粉丝 · ${stats.weibo.posts.toLocaleString()} 微博`,
           description: "分享游戏行业见解、设计理念和心理学研究，连接游戏与现实世界。",
           iconName: "icon-weibo",
           bgColor: "#FB6622",
@@ -72,8 +73,8 @@ export default function MarqueeDemo() {
         },
         {
           name: "Twitter",
-          username: "@GameNomad",
-          stats: `${stats.twitter.followers.toLocaleString()}+ 粉丝 · ${stats.twitter.tweets.toLocaleString()}+ 推文`,
+          username: "@Zina",
+          stats: `${stats.twitter.followers.toLocaleString()} 粉丝 · ${stats.twitter.tweets.toLocaleString()} 推文`,
           description: "Sharing insights on game design, behavioral psychology and product development. Connecting games with real-world applications.",
           iconName: "icon-twitter",
           bgColor: "#1DA1F2",
@@ -102,10 +103,8 @@ export default function MarqueeDemo() {
     return (
       <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
         <div className="w-full max-w-4xl mx-auto text-center mb-8">
-          <h2 className="text-3xl font-bold mb-3">社交媒体</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            我活跃在各大社交平台，分享游戏分析、设计思考和行为心理学研究。通过游戏，探索人类行为、决策过程和美学价值。
-          </p>
+       
+          <TextGenerateEffect words="I share stories about #programming, #gaming, #content-creation and #life on the Internet." />
         </div>
         
         <div className="flex gap-4 mb-6 overflow-hidden">
@@ -156,7 +155,7 @@ export default function MarqueeDemo() {
     return (
       <div className="relative flex w-full flex-col items-center justify-center overflow-hidden py-12">
         <div className="text-center">
-          <h2 className="text-3xl font-bold mb-3">社交媒体</h2>
+        
           <p className="text-red-500 mb-4">加载数据出错: {error}</p>
           <p className="text-muted-foreground">请刷新页面重试</p>
         </div>
@@ -171,10 +170,8 @@ export default function MarqueeDemo() {
       
       <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
         <div className="w-full max-w-4xl mx-auto text-center mb-8">
-          <h2 className="text-3xl font-bold mb-3">社交媒体</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            我活跃在各大社交平台，分享游戏分析、设计思考和行为心理学研究。通过游戏，探索人类行为、决策过程和美学价值。
-          </p>
+       
+          <TextGenerateEffect words="I share stories about #programming, #gaming, #content-creation and #life on the Internet." />
         </div>
         
         <Marquee pauseOnHover className="[--duration:40s]">
@@ -192,10 +189,8 @@ export default function MarqueeDemo() {
         <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
         
         <div className="mt-10 max-w-3xl mx-auto text-center">
-          <p className="text-lg font-medium mb-4">我的内容创作理念</p>
-          <blockquote className="text-muted-foreground italic">
-            "我不仅仅是玩游戏。我将游戏视为一种实验，通过游戏，我研究行为心理学、产品设计、决策制定和美学。我相信游戏是理解人类行为和设计原则的绝佳窗口，我的内容旨在分享这些洞察。"
-          </blockquote>
+        
+          <TextGenerateEffect words="Storytelling is my passion because I've been profoundly shaped by the stories of others." />
         </div>
       </div>
     </>
